@@ -1,10 +1,14 @@
-FROM ubuntu:18.04
+FROM python:3.9-buster
 MAINTAINER amanskywalker (mail@amanskywalker.xyz)
 
-RUN apt-get update -qy
+# update the instance
+RUN apt update -y
 
-RUN apt-get install -y curl
+# install the pip and dependencies
+RUN apt install -y python3-pip libpq-dev python-apt
 
-RUN curl -fsSL https://get.docker.com -o get-docker.sh
+# install gdal dependencies
+RUN apt install -y binutils libproj-dev gdal-bin postgis
 
-RUN sh get-docker.sh
+# install the pipenv 
+RUN pip install pipenv
