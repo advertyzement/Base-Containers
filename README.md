@@ -1,1 +1,1 @@
-# Base-Containers
+# Python GIS container image
