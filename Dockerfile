@@ -1,4 +1,4 @@
-FROM amanskywalker/python-pipenv:3.10
+FROM amanskywalker/python-pipenv:3.13
 MAINTAINER amanskywalker (mail@amanskywalker.xyz)
 
 # update the instance
